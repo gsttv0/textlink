@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de String</title>
+</head>
+<body>
+    <h2>text-link maker ッ - AVISO: TEXTO PRECISA ESTAR SEM ACENTO!</h2>
+    <label for="inputString">Insira o texto:</label>
+    <input type="text" id="inputString">
+    <button onclick="tratarString()">Gerar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function tratarString() {
+            // Obter a string do input
+            var inputElement = document.getElementById("inputString");
+            var inputString = inputElement.value;
+
+            // Adicionar um traço ao final da string antes do tratamento
+            inputString = inputString.trim() + "-";
+
+            // Realizar o tratamento da string
+            var resultadoString = inputString.replace(/ /g, "-").toLowerCase();
+
+            // Exibir o resultado
+            var resultadoElement = document.getElementById("resultado");
+            resultadoElement.textContent = "[text-link]:    "   + resultadoString;
+        }
+    </script>
+    <br>
+    <br>
+    <footer>
+      <p>-Desenvolvido por Gustavo Schmitt </p>
+    </footer>
+  
+</body>
+</html>
